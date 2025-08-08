@@ -1,3 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Glassmorphism card effect */
+.glassmorphism-card {
+  background: rgba(20, 8, 16, 0.65);
+  backdrop-filter: blur(18px) saturate(1.2);
+  box-shadow: 0 8px 32px 0 #7b223355, 0 1.5px 8px 0 #0008;
+  border-radius: 1.25rem;
+  border: 2px solid #7b2233;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes maroon-border {
+  0% { box-shadow: 0 0 0 0 #7b2233cc, 0 0 24px 0 #7b223355; }
+  50% { box-shadow: 0 0 0 4px #7b223355, 0 0 32px 8px #7b2233cc; }
+  100% { box-shadow: 0 0 0 0 #7b2233cc, 0 0 24px 0 #7b223355; }
+}
+.animate-maroon-border {
+  animation: maroon-border 2.8s infinite cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+/* Modern font for headings */
+.font-modern {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.01em;
+}
+@keyframes crackle {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    filter: blur(0.5px) brightness(1.2);
+    box-shadow: 0 0 8px 2px #7b2233cc, 0 0 0 0 #fff0;
+  }
+  40% {
+    transform: scale(1.18) rotate(-8deg);
+    opacity: 0.85;
+    filter: blur(1.5px) brightness(1.5);
+    box-shadow: 0 0 16px 4px #7b2233cc, 0 0 0 0 #fff0;
+  }
+  70% {
+    transform: scale(0.92) rotate(8deg);
+    opacity: 0.7;
+    filter: blur(1.2px) brightness(1.1);
+    box-shadow: 0 0 12px 2px #7b2233cc, 0 0 0 0 #fff0;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    filter: blur(0.5px) brightness(1.2);
+    box-shadow: 0 0 8px 2px #7b2233cc, 0 0 0 0 #fff0;
+  }
+}
+
+.crackle {
+  animation: crackle 0.22s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.shadow-crackle {
+  box-shadow: 0 0 8px 2px #7b2233cc, 0 0 0 0 #fff0;
+}
 @import "tailwindcss";
 
 :root {
@@ -19,8 +83,26 @@
   }
 }
 
-body {
-  background: var(--background);
+
+html, body {
+  background: #000 !important;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  cursor: auto;
+}
+
+/* Restore default pointer for clickable elements */
+a, button, [role="button"], .cursor-pointer, li:hover {
+  cursor: pointer;
+}
+
+/* Hover animation for MatchingDonors list items */
+.matching-donor-item {
+  transition: transform 0.18s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.18s;
+}
+.matching-donor-item:hover {
+  transform: scale(1.04) translateY(-2px) rotate(-1deg);
+  box-shadow: 0 4px 24px 0 #7b223355;
+  background: #2a0d13cc;
+  z-index: 10;
 }

@@ -1,4 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# Organ Donation Portal
+
+This is a full-stack Next.js project with Firebase (Authentication, Firestore, Storage) and Tailwind CSS.
+
+## Features
+- Firebase Authentication (email/password login & signup)
+- Firestore for storing user and form data
+- Firebase Storage for file uploads
+- Tailwind CSS for styling
+- Protected Dashboard route
+- Donor and Recipient forms
+- Test page to list all users
+
+## Pages
+- `/` Home
+- `/login` Login
+- `/signup` Signup
+- `/dashboard` Dashboard (protected)
+- `/donor-form` Donor Form
+- `/recipient-form` Recipient Form
+- `/test` List all users
+
+## Getting Started
+
+1. Copy `.env.local` and add your Firebase config values.
+2. Run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the app.
+
+## File Structure
+- `src/firebase.js` — Firebase config and exports
+- `src/components/` — Navbar, FileUpload, etc.
+- `src/hooks/useAuth.ts` — Auth hook for route protection
+- `src/app/` — All Next.js pages
+
+## License
+MIT
 
 ## Getting Started
 
