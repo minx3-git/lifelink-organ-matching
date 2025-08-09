@@ -76,7 +76,7 @@ export default function MatchingDonors({ organ, bloodGroup }: { organ: string, b
       <ul style={{ padding: 0, margin: 0 }}>
         {matches.map((donor, idx) => (
           <li key={donor.id || idx} className="border-b border-maroon-900 bg-maroon-950/40 rounded-lg px-6 py-3 matching-donor-item" style={{ marginBottom: 12, listStyle: 'none' }}>
-            <div className="text-lg text-maroon-200"><span className="font-semibold">Name:</span> {donor.name}</div>
+            <div className="text-lg text-maroon-200"><span className="font-semibold">Name:</span> {donor.fullName}</div>
             <div className="text-maroon-300"><span className="font-semibold">Contact:</span> {donor.contact}</div>
             <div className="text-maroon-300"><span className="font-semibold">Blood Group:</span> {donor.bloodGroup}</div>
             <div className="text-maroon-300"><span className="font-semibold">Organs:</span> {Array.isArray(donor.organs) ? donor.organs.join(', ') : donor.organs || donor.organ}</div>
