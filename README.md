@@ -1,6 +1,8 @@
 
 # Organ Donation Portal
 
+A project done by my team where i was the lead developer
+
 This is a full-stack Next.js project with Firebase (Authentication, Firestore, Storage) and Tailwind CSS.
 
 ## Features
