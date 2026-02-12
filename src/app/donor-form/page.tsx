@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import ThemedFormWrapper from '../../components/ThemedFormWrapper';
 import { firestore, storage } from '../../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, doc, setDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 export default function DonorForm() {
